@@ -2,12 +2,14 @@ import { useState } from 'react'
 import './index.css'
 import './App.css'
 import Table from '../src/components/Table'
+import Dropdown from './components/Dropdown'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Dropdown />
     <Table />
       <h1>Vite + React</h1>
       <div className="card">
