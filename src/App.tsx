@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './index.css'
 import './App.css'
 import Table from '../src/components/Table'
-import Dropdown from './components/Dropdown'
+import Dropdown from './components/SelectionBox'
 
 function App() {
   const [count, setCount] = useState(0)
