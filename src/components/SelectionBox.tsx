@@ -4,6 +4,8 @@ import { ImCheckboxChecked, ImCheckboxUnchecked } from "react-icons/im";
 export default function SelectionBox(props: Props) {
   
   const [isChecked, setIsChecked] = useState(false);
+
+  const [isSelected, setIsSelected] = useState(false);
    
   const handleClick = () => {
     setIsChecked(!isChecked);
