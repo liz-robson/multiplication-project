@@ -11,10 +11,10 @@ export default function SelectionBox(props: Props) {
 
   return (
     <>
-      <div className="bg-emerald-200 rounded-lg h-96 relative flex flex-col items-center justify-center w-auto">
+      <div className="bg-emerald-700 rounded-lg h-96 relative flex flex-col items-center justify-center w-auto">
         <div>
           <h1  className="mb-4 text-5xl">{props.table.tableSize}</h1>
-          <p className="mb-4 text-2xl">Answer {props.table.sumNumber} sums</p>
+          <p className="mb-16 text-2xl">Complete {props.table.sumNumber} sums</p>
         </div>
         {isChecked ? <ImCheckboxChecked  className="w-8 h-8" onClick={handleClick} /> : <ImCheckboxUnchecked  className="w-8 h-8" onClick={handleClick} />}
         <p className="mb-4 text-2xl absolute bottom-0 right-5">5 mins</p>
