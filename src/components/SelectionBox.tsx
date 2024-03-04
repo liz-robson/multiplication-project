@@ -14,10 +14,14 @@ export default function SelectionBox({}: Props) {
 
   return (
     <>
-      <div className="bg-blue-200 rounded-lg p-4 w-1/3 h-96 flex items-center justify-center">
-        <div><h1  className="mb-4">9 x 3</h1></div>
-        {isChecked ? <ImCheckboxChecked  className="w-8 h-8 column" onClick={handleClick} /> : <ImCheckboxUnchecked  className="w-8 h-8 column" onClick={handleClick} />}
-      </div>
+      <div className="bg-blue-200 rounded-lg p-4 w-1/3 h-96 relative flex flex-col items-center justify-center">
+        <div>
+          <h1  className="mb-4 text-5xl">9 x 3</h1>
+          <p className="mb-4 text-2xl">Answer 27 sums</p>
+        </div>
+        {isChecked ? <ImCheckboxChecked  className="w-8 h-8" onClick={handleClick} /> : <ImCheckboxUnchecked  className="w-8 h-8" onClick={handleClick} />}
+        <p className="mb-4 text-2xl absolute bottom-0 right-5">5 mins</p>
+        </div>
     </>
   );
   
