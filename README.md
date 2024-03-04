@@ -5,3 +5,7 @@
 // Create function that allows user input
 // Create function that checks user's input
 // Create a timer
+
+// Day 2 plan
+// On click of checkbox, render relevant table placeholder
+// Create table and styling
