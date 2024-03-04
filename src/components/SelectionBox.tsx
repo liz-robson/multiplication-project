@@ -11,7 +11,7 @@ export default function SelectionBox(props: Props) {
 
   return (
     <>
-      <div className="bg-blue-200 rounded-lg p-4 w-1/3 h-96 relative flex flex-col items-center justify-center">
+      <div className="bg-emerald-200 rounded-lg h-96 relative flex flex-col items-center justify-center w-auto">
         <div>
           <h1  className="mb-4 text-5xl">{props.table.tableSize}</h1>
           <p className="mb-4 text-2xl">Answer {props.table.sumNumber} sums</p>

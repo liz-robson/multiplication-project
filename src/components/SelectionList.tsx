@@ -5,10 +5,10 @@ export default function SelectionList(props) {
     const objects = props.tableList;
 
   return (
-    <>
-    {objects.map((table) => {
-        return <SelectionBox table={table}/>;
+    <div className="grid grid-cols-3 gap-4">
+    {objects.map((table, index) => {
+        return <SelectionBox className="" table={table} key={index}/>;
     })}
-    </>
+    </div>
   );
 }
