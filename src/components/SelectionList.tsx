@@ -6,8 +6,8 @@ export default function SelectionList(props) {
 
   return (
     <>
-    {objects.map((object) => {
-        return <SelectionBox table={object}/>;
+    {objects.map((table) => {
+        return <SelectionBox table={table}/>;
     })}
     </>
   );
