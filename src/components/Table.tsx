@@ -4,13 +4,13 @@ const Table = () => {
   // Initialize state to manage cell values
   const [cellValues, setCellValues] = useState(Array(10).fill(Array(4).fill('')));
 
-  // Handle cell value changes
-  const handleCellValueChange = (rowIndex, colIndex, event) => {
-    const newValue = event.target.value;
-    const updatedCellValues = [...cellValues];
-    updatedCellValues[rowIndex][colIndex] = newValue;
-    setCellValues(updatedCellValues);
-  };
+  // // Handle cell value changes
+  // const handleCellValueChange = (rowIndex, colIndex, event) => {
+  //   const newValue = event.target.value;
+  //   const updatedCellValues = [...cellValues];
+  //   updatedCellValues[rowIndex][colIndex] = newValue;
+  //   setCellValues(updatedCellValues);
+  // };
 
   return (
     <div className="container mx-auto">
