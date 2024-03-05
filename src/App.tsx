@@ -12,6 +12,7 @@ function App() {
   return (
     <>
     <SelectionList tableList={tables} />
+    {/* <Table tableList={tables}/> */}
     {/* <Table />
       <h1>Vite + React</h1>
       <div className="card">

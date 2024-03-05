@@ -1,52 +1,62 @@
 [
     {
         "id": 1,
-        "tableSize": "9 x 3",
+        "tableWidth": "9",
+        "tableHeight": "3",
         "sumNumber": "27"
     },
     {
         "id": 2,
-        "tableSize": "9 x 4",
+        "tableWidth": "9",
+        "tableHeight": "4",
         "sumNumber": "36"
     },
     {
         "id": 3,
-        "tableSize": "9 x 5",
+        "tableWidth": "9",
+        "tableHeight": "5",
         "sumNumber": "45"
     },
     {
         "id": 4,
-        "tableSize": "9 x 6",
+        "tableWidth": "9",
+        "tableHeight": "6",
         "sumNumber": "54"
     },
     {
         "id": 5,
-        "tableSize": "9 x 7",
+        "tableWidth": "9",
+        "tableHeight": "7",
         "sumNumber": "63"
     },
     {
         "id": 6,
-        "tableSize": "9 x 8",
+        "tableWidth": "9",
+        "tableHeight": "8",
         "sumNumber": "72"
     },
     {
         "id": 7,
-        "tableSize": "9 x 9",
+        "tableWidth": "9",
+        "tableHeight": "9",
         "sumNumber": "81"
     },
     {
         "id": 8,
-        "tableSize": "9 x 10",
+        "tableWidth": "9",
+        "tableHeight": "10",
         "sumNumber": "90"
     },  
     {
         "id": 9,
-        "tableSize": "11 x 11",
-        "sumNumber": "22"
+        "tableWidth": "11",
+        "tableHeight": "11",
+        "sumNumber": "121"
     },
     {
         "id": 10,
-        "tableSize": "11 x 12",
+        "tableWidth": "11",
+        "tableHeight": "12",
         "sumNumber": "132"
     }
 ]

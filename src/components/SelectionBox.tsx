@@ -5,14 +5,13 @@ export default function SelectionBox(props: Props) {
   
   const handleClick = () => {
     props.onSelect(props.table.id)
-    // setIsChecked(!isChecked);
   }
 
   return (
     <>
       <div className="bg-emerald-700 hover:bg-emerald-500 rounded-lg h-96 relative flex flex-col items-center justify-center w-auto">
         <div>
-          <h1  className="mb-4 text-5xl">{props.table.tableSize}</h1>
+          <h1  className="mb-4 text-5xl">{props.table.tableWidth} x {props.table.tableHeight}</h1>
           <p className="mb-16 text-2xl">Complete {props.table.sumNumber} sums</p>
         </div>
         {props.selectedId === props.table.id ? 
