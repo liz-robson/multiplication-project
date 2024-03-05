@@ -19,7 +19,7 @@ export default function SelectionList(props) {
         return <SelectionBox table={table} key={index} onSelect={handleSelect} selectedId={selectedId}/>;
     })}
     </div>
-    <Table tables={objects}/>
+    <Table tables={objects} selectedId={selectedId}/>
     </>
   );
 }

@@ -1,43 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-interface TableProps {
-  Table: { tableHeight: number, tableWidth: number }[];
-}
+const Table = () => {
+  // Initialize state to manage cell values
+  const [cellValues, setCellValues] = useState(Array(10).fill(Array(4).fill('')));
 
-const Table: React.FC<TableProps> = ({ tables }) => {
+  // Handle cell value changes
+  const handleCellValueChange = (rowIndex, colIndex, event) => {
+    const newValue = event.target.value;
+    const updatedCellValues = [...cellValues];
+    updatedCellValues[rowIndex][colIndex] = newValue;
+    setCellValues(updatedCellValues);
+  };
 
-    return (
-      <table>
+  return (
+    <div className="container mx-auto">
+      <table className="table-auto border border-collapse">
         <tbody>
-          {tables.map((table, rowIndex) => (
+          {cellValues.map((row, rowIndex) => (
             <tr key={rowIndex}>
-              {[...Array(tables.tableWidth)].map((_, cellIndex) => (
-                <td key={cellIndex}>Cell</td>
+              {row.map((cell, colIndex) => (
+                <td key={`${rowIndex}-${colIndex}`} className="border p-2">
+                  <input
+                    type="text"
+                    value={cell}
+                    onChange={(event) => handleCellValueChange(rowIndex, colIndex, event)}
+                    className="w-full outline-none"
+                  />
+                </td>
               ))}
             </tr>
           ))}
         </tbody>
       </table>
-    );
-  }
+    </div>
+  );
+};
 
-  export default Table;
-            
-
-  //   <div className="bg-gray-100 p-4">
-  // <div className="container mx-auto">
-  //   <div className="grid grid-cols-12 gap-4">
-  //     <div className="bg-gray-300 p-4">1</div>
-  //     <div className="bg-gray-300 p-4">2</div>
-  //     <div className="bg-gray-300 p-4">3</div>
-  //     <div className="bg-gray-300 p-4">4</div>
-  //     <div className="bg-gray-300 p-4">5</div>
-  //     <div className="bg-gray-300 p-4">6</div>
-  //     <div className="bg-gray-300 p-4">1</div>
-  //     <div className="bg-gray-300 p-4">2</div>
-  //     <div className="bg-gray-300 p-4">3</div>
-  //     <div className="bg-gray-300 p-4">4</div>
-  //     <div className="bg-gray-300 p-4">5</div>
-  //     <div className="bg-gray-300 p-4">6</div>
-  //   </div>
-  // </div>
+export default Table;
