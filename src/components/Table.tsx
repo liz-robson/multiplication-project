@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Table = () => {
+export default function Table() {
   // Initialize state to manage cell values
   const [cellValues, setCellValues] = useState(Array(10).fill(Array(4).fill('')));
 
@@ -35,5 +35,3 @@ const Table = () => {
     </div>
   );
 };
-
-export default Table;
