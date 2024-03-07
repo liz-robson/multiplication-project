@@ -1,6 +1,15 @@
-// import { useState } from 'react';
+import React from "react";
 
-// export default function Table(props) {
+export default function Table(props) { 
+
+ 
+ return (
+    <div>
+      <h1>This is my dynamic table</h1>
+      <h2>{props.id}</h2>
+    </div>
+  );
+}
 
 // //   console.log(props);
 
