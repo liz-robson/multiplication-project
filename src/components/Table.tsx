@@ -10,12 +10,38 @@ export default function Table({ id, tables }) {
   const column = tables[id - 1].tableWidth;
   const row = tables[id - 1].tableHeight;
 
+    // Initialize cell values
+    const cellValues = Array.from({ length: row }, () => Array.from({ length: column }, () => ''));
+    console.log(cellValues)
+
+    // Handle cell value changes
+    const handleCellValueChange = (event, rowIndex, colIndex) => {
+      const newValue = event.target.value;
+      // Update cell value
+      cellValues[rowIndex][colIndex] = newValue;
+    };
+  
+
   return (
-    <div>
-      <h1>This is my dynamic table</h1>
-      <h2>{id}</h2>
-      <h5>Rows = {row}</h5>
-      <h5>Columns = {column}</h5>
+    <div className="container mx-auto">
+      <table className="table-auto border border-collapse">
+        <tbody>
+          {cellValues.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {row.map((cell, colIndex) => (
+                <td key={`${rowIndex}-${colIndex}`} className="border p-2">
+                  <input
+                    type="text"
+                    value={cell}
+                    onChange={(event) => handleCellValueChange(event, rowIndex, colIndex)}
+                    className="w-full outline-none"
+                  />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
