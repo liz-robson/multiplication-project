@@ -1,15 +1,25 @@
 import React from "react";
 
-export default function Table(props) { 
+export default function Table({ id, tables }) {
 
- 
- return (
+  // error handling
+  if (!tables || !tables[id - 1]) {
+    return <div>No table found for ID: {id}</div>;
+  }
+
+  const column = tables[id - 1].tableWidth;
+  const row = tables[id - 1].tableHeight;
+
+  return (
     <div>
       <h1>This is my dynamic table</h1>
-      <h2>{props.id}</h2>
+      <h2>{id}</h2>
+      <h5>Rows = {row}</h5>
+      <h5>Columns = {column}</h5>
     </div>
   );
 }
+
 
 // //   console.log(props);
 
