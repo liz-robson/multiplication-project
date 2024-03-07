@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-export default function Table() {
+export default function Table(props) {
   // Initialize state to manage cell values
-  const [cellValues, setCellValues] = useState(Array(10).fill(Array(4).fill('')));
+  const [cellValues, setCellValues] = useState(Array(props).fill(Array(4).fill('')));
 
   // // Handle cell value changes
   // const handleCellValueChange = (rowIndex, colIndex, event) => {

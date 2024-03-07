@@ -6,12 +6,17 @@ import TablesList from './TablesList.json'
 import SelectionList from './components/SelectionList'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [tables, setTables] = useState(TablesList)
+  const [selectedId, setSelected] = useState(null);
+
+  const handleSelect = (id) => {
+    setSelected(id === selectedId ? null : id);
+  }
 
   return (
     <>
-    <SelectionList tableList={tables} />
+    <SelectionList tableList={tables} selectedId={selectedId} handleSelect={handleSelect}/>
+    <Table tableList={tables} selectedId={selectedId}/>
     {/* <Table tableList={tables}/> */}
     {/* <Table />
       <h1>Vite + React</h1>
