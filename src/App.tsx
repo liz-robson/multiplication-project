@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './index.css'
 import './App.css'
-import Table from '../src/components/Table'
+// import Table from '../src/components/Table'
 import TablesList from './TablesList.json'
 import SelectionList from './components/SelectionList'
 
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
     <SelectionList tableList={tables} selectedId={selectedId} handleSelect={handleSelect}/>
-    <Table tableList={tables} selectedId={selectedId}/>
+    {/* <Table tableList={tables} selectedId={selectedId}/> */}
     {/* <Table tableList={tables}/> */}
     {/* <Table />
       <h1>Vite + React</h1>

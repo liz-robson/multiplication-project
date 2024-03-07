@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 import { ImCheckboxChecked, ImCheckboxUnchecked } from "react-icons/im";
 
-export default function SelectionBox(props: Props) {
+export default function SelectionBox(props) {
   
   const handleClick = () => {
     props.onSelect(props.table.id)

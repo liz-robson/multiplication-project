@@ -1,37 +1,49 @@
-import React, { useState } from 'react';
+// import { useState } from 'react';
 
-export default function Table(props) {
-  // Initialize state to manage cell values
-  const [cellValues, setCellValues] = useState(Array(props).fill(Array(4).fill('')));
+// export default function Table(props) {
 
-  // // Handle cell value changes
-  // const handleCellValueChange = (rowIndex, colIndex, event) => {
-  //   const newValue = event.target.value;
-  //   const updatedCellValues = [...cellValues];
-  //   updatedCellValues[rowIndex][colIndex] = newValue;
-  //   setCellValues(updatedCellValues);
-  // };
+// //   console.log(props);
 
-  return (
-    <div className="container mx-auto">
-      <table className="table-auto border border-collapse">
-        <tbody>
-          {cellValues.map((row, rowIndex) => (
-            <tr key={rowIndex}>
-              {row.map((cell, colIndex) => (
-                <td key={`${rowIndex}-${colIndex}`} className="border p-2">
-                  <input
-                    type="text"
-                    value={cell}
-                    onChange={(event) => handleCellValueChange(rowIndex, colIndex, event)}
-                    className="w-full outline-none"
-                  />
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-};
+// //   let column = 0;
+// //   let row = 0;
+
+// //   if (props.selectedId === props.table.id) {
+// //     column = props.table.tableWidth;
+// //     row = props.table.tableHeight;
+// //   }
+
+// //   const [cellValues, setCellValues] = useState(() => {
+
+// //     return Array(column).fill().map(() => Array(row).fill('')); 
+// //   });
+
+// //   return (
+// //     <div className="container mx-auto">
+// //       <table className="table-auto border border-collapse">
+// //         <tbody>
+// //           {cellValues.map((row, rowIndex) => (
+// //             <tr key={rowIndex}>
+// //               {row.map((cell, colIndex) => (
+// //                 <td key={`${rowIndex}-${colIndex}`} className="border p-2">
+// //                   <input
+// //                     type="text"
+// //                     value={cell}
+// //                     onChange={(event) => handleCellValueChange(rowIndex, colIndex, event)}
+// //                     className="w-full outline-none"
+// //                   />
+// //                 </td>
+// //               ))}
+// //             </tr>
+// //           ))}
+// //         </tbody>
+// //       </table>
+// //     </div>
+// //   );
+// // }
+
+//  // // Handle cell value changes
+//   // const handleCellValueChange = (rowIndex, colIndex, event) => {
+//   //   const newValue = event.target.value;
+//   //   const updatedCellValues = [...cellValues];
+//   //   updatedCellValues[rowIndex][colIndex] = newValue;
+//   //   setCellValues(updatedCellValues);
