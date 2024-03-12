@@ -7,10 +7,26 @@ export default function Table({ id, tables }) {
     return <div>No table found for ID: {id}</div>;
   }
 
+  const table = tables[id - 1]; 
+  const row = table.tableHeight;
+  const column = table.tableWidth;
+
+  const gridRows = [];
+  for (let i = 0; i < row; i++) {
+    const gridColumns = [];
+    for (let j = 0; j < column; j++) {
+      gridColumns.push(<div key={j} className="border border-gray-400 h-24 w-24"></div>);
+    }
+    gridRows.push(<div key={i} className="grid grid-cols-12">{gridColumns}</div>);
+  }
+
   return (
     <>
     <h1>This is my dynamic table</h1>
-    <div className="grid grid-cols-9">
+    <h2>{row}</h2>
+    <h2>{column}</h2>
+    <div className="grid gap-5">
+      {gridRows}
     </div>
     </>
   )
