@@ -11,11 +11,14 @@ export default function Table({ id, tables }) {
   const row = table.tableHeight;
   const column = table.tableWidth;
 
-  const gridRows = [];
+const randomNum = () => { 
+  return Math.floor(Math.random() * 12) + 1;
+}
+  const gridRows = [];  
   for (let i = 0; i < row; i++) {
     const gridColumns = [];
     for (let j = 0; j < column; j++) {
-      gridColumns.push(<div key={j} className="border border-gray-400 h-24 w-24"></div>);
+      gridColumns.push(<div key={j} className="border border-gray-400 h-24 w-24">{randomNum()}</div>);
     }
     gridRows.push(<div key={i} className="grid grid-cols-12">{gridColumns}</div>);
   }
