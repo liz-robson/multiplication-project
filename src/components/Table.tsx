@@ -18,7 +18,12 @@ const randomNum = () => {
   for (let i = 0; i < row; i++) {
     const gridColumns = [];
     for (let j = 0; j < column; j++) {
-      gridColumns.push(<div key={j} className="border border-gray-400 h-24 w-24">{randomNum()}</div>);
+      if (j === 0 || i === 0 ) {
+        gridColumns.push(<div key={j} className="border border-gray-400 h-24 w-24">{randomNum()}</div>);
+        continue;
+      } else {
+        gridColumns.push(<div key={j} className="border border-gray-400 h-24 w-24"></div>);
+      }
     }
     gridRows.push(<div key={i} className="grid grid-cols-12">{gridColumns}</div>);
   }
